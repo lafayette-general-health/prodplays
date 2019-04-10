@@ -16,6 +16,8 @@
       set_fact:
         macinterface: "{{item.split()[3]}}"
       with_items: "{{command_out.stdout_lines}}"
+    
+    - name: Reset
       meta: reset_connection
 
     - name: Gather Port Configuration
