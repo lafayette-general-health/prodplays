@@ -31,6 +31,9 @@
       with_items: "{{ show_out.stdout_lines }}"
       when: '"switchport mode access" in "{{item}}"'
 
+    - name: Reset
+      meta: reset_connection
+      
     - name: Set Voice VLAN and Bounce Port
       register: set_out
       ios_command:
