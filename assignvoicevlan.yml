@@ -2,9 +2,6 @@
 - hosts: "{{ HOSTNAME }}"
   connection: local
 
-  vars:
-    macinterface: []
-
   tasks:
     - name: Initialize Fact
       set_fact:
