@@ -1,7 +1,7 @@
 ---
 - hosts: "{{ HOSTNAME }}"
   connection: local
-  gather_facts: False
+  gather_facts: no
 
   tasks:
     - name: Initialize Fact
