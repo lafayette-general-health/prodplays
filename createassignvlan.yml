@@ -7,7 +7,7 @@
   tasks:
   - name: CREATE VLAN
     ios_vlan: 
-      vlan_id: {{ vlan }}
+      vlan_id: "{{ vlan }}"
       state: present 
       
   - name: SET VLAN ON PORT
