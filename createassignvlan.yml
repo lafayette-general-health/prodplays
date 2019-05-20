@@ -10,6 +10,9 @@
       vlan_id: "{{ vlan }}"
       state: present 
       
+  - name: Reset stupid ass connection because AWX does dumb shit with SSH
+    meta: reset_connection
+      
   - name: SET VLAN ON PORT
     ios_l2_interface:
       name: "GigabitEthernet{{ switchNum }}/0/{{ portNum }}"
