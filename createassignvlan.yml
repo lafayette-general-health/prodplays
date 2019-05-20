@@ -1,5 +1,5 @@
 ---
-- name: Test VLAN
+- name: Create and Assign VLAN
   hosts: "{{ IP }}"
   connection: local
   gather_facts: false
