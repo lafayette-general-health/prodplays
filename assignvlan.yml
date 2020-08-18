@@ -3,11 +3,14 @@
   hosts: "{{ IP }}"
   connection: local
   gather_facts: false
-  
+
   tasks:
- 
-  - name: SET VLAN ON PORT
-    ios_l2_interface:
-      name: "GigabitEthernet{{ switchNum }}/0/{{ portNum }}"
-      access_vlan: "{{ vlan }}"
-      mode: access
+    - name: SET VLAN ON PORT
+      ios_l2_interface:
+        name: "GigabitEthernet{{ switchNum }}/0/{{ portNum }}"
+        access_vlan: "{{ vlan }}"
+        mode: access
+
+    - name: Save running to startup when modified
+      ios_config:
+        save_when: changed
