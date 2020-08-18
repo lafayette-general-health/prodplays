@@ -13,4 +13,4 @@
 
     - name: Save running to startup when modified
       ios_config:
-        save_when: changed
+        save_when: always
